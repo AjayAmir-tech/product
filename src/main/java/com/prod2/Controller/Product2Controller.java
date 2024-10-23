@@ -23,7 +23,7 @@ public class Product2Controller {
 	@GetMapping(value="/getproduct")
 	public List<ProductPojo> getProduct() {
 		String url1="http://localhost:9091/GST/getpercentage/";
-		String url2="http://localhost:9090/product/getproducts";
+		String url2="http://localhost:9095/product/getproducts";
 		
 		ResponseEntity<List<ProductPojo>> re2= rt.exchange(url2, HttpMethod.GET, null, new ParameterizedTypeReference<List<ProductPojo>>() {});
 		List<ProductPojo> products = re2.getBody();
